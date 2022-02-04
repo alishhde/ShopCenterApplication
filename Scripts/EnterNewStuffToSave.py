@@ -1,0 +1,71 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Enter_new_stuff_ui(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(346, 342)
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        Dialog.setFont(font)
+        Dialog.setStyleSheet("background-color: rgb(198, 255, 252);")
+        self.back_button = QtWidgets.QPushButton(Dialog)
+        self.back_button.setGeometry(QtCore.QRect(60, 240, 81, 28))
+        self.back_button.setObjectName("back_button")
+        self.save_button = QtWidgets.QPushButton(Dialog)
+        self.save_button.setGeometry(QtCore.QRect(150, 240, 81, 28))
+        self.save_button.setObjectName("save_button")
+        self.name_lineedit = QtWidgets.QLineEdit(Dialog)
+        self.name_lineedit.setGeometry(QtCore.QRect(60, 60, 181, 21))
+        self.name_lineedit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.name_lineedit.setObjectName("name_lineedit")
+        self.brand_lineedit = QtWidgets.QLineEdit(Dialog)
+        self.brand_lineedit.setGeometry(QtCore.QRect(60, 100, 181, 21))
+        self.brand_lineedit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.brand_lineedit.setObjectName("brand_lineedit")
+        self.money_lineedit = QtWidgets.QLineEdit(Dialog)
+        self.money_lineedit.setGeometry(QtCore.QRect(60, 140, 181, 21))
+        self.money_lineedit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.money_lineedit.setObjectName("money_lineedit")
+        self.reamaining_lineedit = QtWidgets.QLineEdit(Dialog)
+        self.reamaining_lineedit.setGeometry(QtCore.QRect(60, 180, 181, 21))
+        self.reamaining_lineedit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.reamaining_lineedit.setObjectName("reamaining_lineedit")
+        self.name_lable = QtWidgets.QLabel(Dialog)
+        self.name_lable.setGeometry(QtCore.QRect(260, 60, 55, 16))
+        self.name_lable.setAlignment(QtCore.Qt.AlignCenter)
+        self.name_lable.setObjectName("name_lable")
+        self.brand_lable = QtWidgets.QLabel(Dialog)
+        self.brand_lable.setGeometry(QtCore.QRect(260, 100, 55, 21))
+        self.brand_lable.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.brand_lable.setObjectName("brand_lable")
+        self.money_lable = QtWidgets.QLabel(Dialog)
+        self.money_lable.setGeometry(QtCore.QRect(260, 140, 55, 16))
+        self.money_lable.setAlignment(QtCore.Qt.AlignCenter)
+        self.money_lable.setObjectName("money_lable")
+        self.remainning_lable = QtWidgets.QLabel(Dialog)
+        self.remainning_lable.setGeometry(QtCore.QRect(250, 180, 61, 20))
+        self.remainning_lable.setObjectName("remainning_lable")
+
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.back_button.setText(_translate("Dialog", "برگشت"))
+        self.save_button.setText(_translate("Dialog", "ذخیره "))
+        self.name_lable.setText(_translate("Dialog", "نام"))
+        self.brand_lable.setText(_translate("Dialog", "برند"))
+        self.money_lable.setText(_translate("Dialog", "قیمت"))
+        self.remainning_lable.setText(_translate("Dialog", "موجودی"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = Enter_new_stuff_ui()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
+

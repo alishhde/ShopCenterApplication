@@ -1,0 +1,70 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class SigninPage_ui(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(692, 384)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        Dialog.setFont(font)
+        Dialog.setStyleSheet("background-color: rgb(255, 248, 229);")
+        self.usernamelbl = QtWidgets.QLabel(Dialog)
+        self.usernamelbl.setGeometry(QtCore.QRect(450, 90, 91, 21))
+        self.usernamelbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.usernamelbl.setObjectName("usernamelbl")
+        self.passwordlbl = QtWidgets.QLabel(Dialog)
+        self.passwordlbl.setGeometry(QtCore.QRect(450, 140, 91, 21))
+        self.passwordlbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.passwordlbl.setObjectName("passwordlbl")
+        self.loginaslbl = QtWidgets.QLabel(Dialog)
+        self.loginaslbl.setGeometry(QtCore.QRect(440, 200, 121, 20))
+        self.loginaslbl.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignHCenter)
+        self.loginaslbl.setObjectName("loginaslbl")
+        self.usernamelineedit = QtWidgets.QLineEdit(Dialog)
+        self.usernamelineedit.setGeometry(QtCore.QRect(140, 90, 281, 21))
+        self.usernamelineedit.setAutoFillBackground(False)
+        self.usernamelineedit.setAlignment(QtCore.Qt.AlignCenter)
+        self.usernamelineedit.setObjectName("usernamelineedit")
+        self.passwordlinedit = QtWidgets.QLineEdit(Dialog)
+        self.passwordlinedit.setGeometry(QtCore.QRect(140, 140, 281, 21))
+        self.passwordlinedit.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.passwordlinedit.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.passwordlinedit.setObjectName("passwordlinedit")
+        self.comboBox = QtWidgets.QComboBox(Dialog)
+        self.comboBox.setGeometry(QtCore.QRect(150, 190, 271, 31))
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.backbutton = QtWidgets.QPushButton(Dialog)
+        self.backbutton.setGeometry(QtCore.QRect(210, 270, 101, 31))
+        self.backbutton.setObjectName("backbutton")
+        self.loginbutton = QtWidgets.QPushButton(Dialog)
+        self.loginbutton.setGeometry(QtCore.QRect(330, 270, 101, 31))
+        self.loginbutton.setObjectName("loginbutton")
+
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.usernamelbl.setText(_translate("Dialog", "نام کاربری"))
+        self.passwordlbl.setText(_translate("Dialog", "رمز عبور"))
+        self.loginaslbl.setText(_translate("Dialog", "ورود به عنوان "))
+        self.comboBox.setItemText(0, _translate("Dialog", "مشتری"))
+        self.comboBox.setItemText(1, _translate("Dialog", "انباردار"))
+        self.comboBox.setItemText(2, _translate("Dialog", "مدیر فروش"))
+        self.backbutton.setText(_translate("Dialog", "قبلی"))
+        self.loginbutton.setText(_translate("Dialog", "ورود"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = SigninPage_ui()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
+

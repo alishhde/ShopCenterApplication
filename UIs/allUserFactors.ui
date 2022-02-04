@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>542</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="successfull_lable">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>پرداخت موفقیت آمیز انجام شد</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="factortable">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>511</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>نام کالا</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>کد کالا</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>قیمت کالا</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>تاریخ خرید </string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="rebuy_button">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>510</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید مجدد</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="to_see_all_factors_button">
+   <property name="geometry">
+    <rect>
+     <x>242</x>
+     <y>67</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>برای دیدن فاکتور های خودتان کلیک کنید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit_button">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>510</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خروج از برنامه</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
